@@ -1,2 +1,9 @@
+nginx demo
+
 
 http://localhost:5001/print_path
+
+
+@see more at 
+https://nginx.org
+https://dev.to/danielkun/nginx-everything-about-proxypass-2ona
