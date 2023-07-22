@@ -1,0 +1,25 @@
+version: '3.8'
+
+x-project_name: demo-nginx-proxy
+
+services:
+  container_name: app
+  image: nginx-demo-app
+  app:
+    build:
+      context: ./app
+    networks:
+      - my_network
+
+  nginx-proxy:
+    container_name: proxy
+    image: nginx-demo-proxy
+    build:
+      context: ./proxy
+    networks:
+      - my_network
+    ports:
+      - "5001:80"
+
+networks:
+  my_network:
