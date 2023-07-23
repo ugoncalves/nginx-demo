@@ -3,9 +3,9 @@ version: '3.8'
 x-project_name: demo-nginx-proxy
 
 services:
-  container_name: app
-  image: nginx-demo-app
   app:
+    container_name: webapp
+    image: nginx-demo-app
     build:
       context: ./app
     networks:
