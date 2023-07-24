@@ -1,9 +1,10 @@
 nginx demo
 
 
-http://localhost:5001/print_path
+http://localhost:5001/webapp/sessions/1/refresh
 
 
 @see more at 
 https://nginx.org
+https://www.digitalocean.com/community/tutorials/nginx-location-directive
 https://dev.to/danielkun/nginx-everything-about-proxypass-2ona
