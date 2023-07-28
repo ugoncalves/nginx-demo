@@ -1,5 +1,9 @@
 FROM nginxinc/nginx-unprivileged:latest
+#FROM nginx
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/template_nginx.conf
+COPY script.sh /etc/nginx/.
 
-EXPOSE 80
+EXPOSE 8080
+
+ENTRYPOINT [ "/bin/bash", "/etc/nginx/script.sh", "/etc/nginx/template_nginx.conf", "/etc/nginx/nginx.conf"]

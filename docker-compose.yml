@@ -12,12 +12,14 @@ services:
   nginx-proxy:
     container_name: proxy
     image: nginx-demo-proxy
+    environment:
+      - ALLOW_ORIGIN="example.com"
     build:
       context: ./proxy
     networks:
       - my_network
-    ports:
-      - "5001:80"
+    # ports:
+    #   - "5001:80"
 
 networks:
   my_network:
